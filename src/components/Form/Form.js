@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import FileBase from 'react-file-base64';
+import { useDispatch } from 'react-redux';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
+
 import useStyles from './styles';
+import { createPost } from '../../actions/posts';
 
 const Form = () => {
     const [postData, setPostData] = useState({
@@ -9,9 +12,14 @@ const Form = () => {
     });
 
     const classes = useStyles();
+    const dispatch = useDispatch();
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        // when the user submits we want to send a post request of all the data to the server
+        // Always use the "prevent Default function" to prevent the browser from refreshing
+        e.preventDefault();
 
+        dispatch(createPost(postData));
     };
 
     const clear = () => {
