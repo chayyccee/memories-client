@@ -47,6 +47,8 @@ Your app is ready to be deployed!
 # Memories App - Server
 
 Open [Memories App - Server](https://memories-app-backend-resource.herokuapp.com/posts) to view in your browser.
+
+See Server Github Repo [Here](https://github.com/chayyccee/memories-server).
 ## Available Scripts
 
 In the project directory, you can run:
