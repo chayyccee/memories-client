@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This app is a Full Stack MERN application. The app is called Memories. It is a simple social media app
 that allows users to post interesting events that happened in their lives. This project is aimed at
+
     1. Understanding the essentials of the CRUD functionality in applications.
     2. Getting a good grip at full stack development, using the MERN stack and redux.
 
@@ -72,7 +73,9 @@ Open [http://localhost:5000/posts](http://localhost:5000/posts) to view it in th
     -Mongo DB
     -Mongoose
     -Redux
-   And for deployments,
+
+And for deployments,
+
     -Netlify for Client
     -Heroku for Server
 ## Learn More
