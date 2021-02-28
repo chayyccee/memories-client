@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "description": "A social media app that allows users to post interesting events that happened in their lives.",
   "proxy": "https://localhost:5000",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
@@ -26,6 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "author": "Chinedu Eke",
+  "license": "MIT",
   "eslintConfig": {
     "extends": [
       "react-app",
