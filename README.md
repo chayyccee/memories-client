@@ -1,7 +1,24 @@
-# Getting Started with Create React App
+# Memories App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is a Full Stack MERN application. The app is called Memories. It is a simple social media app
+that allows users to post interesting events that happened in their lives. This project is aimed at
+    1. Understanding the essentials of the CRUD functionality in applications.
+    2. Getting a good grip at full stack development, using the MERN stack and redux.
 
+# App Features
+
+    1. Users can add a new post.
+    2. Users can add an Image.
+    3. Users can edit a post and it gets updated.
+    4. Users can like a post.
+    5. Users can delete a post.
+    6. Users can add description message to a post.
+    7. The time the post was created can be visible by the user.
+
+# Memories App - Client
+
+Open [Memories App - Client](https://memories-app-frontend.netlify.app/) to view in your browser.
 ## Available Scripts
 
 In the project directory, you can run:
@@ -27,44 +44,62 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Memories App - Server
 
-### `yarn eject`
+Open [Memories App - Server](https://memories-app-backend-resource.herokuapp.com/posts) to view in your browser.
+## Available Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+In the project directory, you can run:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Runs the server and automatically runs `nodemon index js` 
+please note herein that if you see `Server is running on port: 5000` kindly check your npm installation, and be sure you installed in the right directory.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Runs the app in the development mode.\
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
+Open [http://localhost:5000/posts](http://localhost:5000/posts) to view it in the browser.
+
+# Built With
+
+    -React
+    -Material UI
+    -Node JS
+    -Express JS
+    -Mongo DB
+    -Mongoose
+    -Redux
+   And for deployments,
+    -Netlify for Client
+    -Heroku for Server
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+To learn Redux, check out [React Redux](https://react-redux.js.org/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To learn Material UI, check out [Material UI, getting started](https://material-ui.com/getting-started/installation/).
 
-### Analyzing the Bundle Size
+To learn Node JS, check out the [NodeJS Documentation](https://nodejs.org/en/docs/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To learn Express JS, check out the [ExpressJS getting started](http://expressjs.com/en/starter/installing.html).
 
-### Making a Progressive Web App
+To learn MongoDB, check out the [MongoDB documentation](https://docs.mongodb.com/).
+    -As a helper information, when creating cluster in MongoDB Atlas, go to network access, and kindly set it to allow access anywhere. This will save you some grey hair, when deploying your backend on heroku.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To learn Mongoose, check out the [Mongoose Documentation](https://mongoosejs.com/docs/).
 
-### Advanced Configuration
+To learn Heroku, check out the [Heroku Dev Center](https://devcenter.heroku.com/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To learn Netlify, checkout the [Netlify Documentation](https://docs.netlify.com/).
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Acknowledgments
+   - Javascript Mastery 
+# License
+  MIT © Chinedu Eke  
+# Author
+  Chinedu Eke
