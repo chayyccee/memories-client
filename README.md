@@ -56,7 +56,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the server and automatically runs `nodemon index js` 
-please note herein that if you see `Server is running on port: 5000` kindly check your npm installation, and be sure you installed in the right directory.
+please note herein that if you do not see `Server is running on port: 5000` kindly check your npm installation, and be sure you installed in the right directory.
 
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
