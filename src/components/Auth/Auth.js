@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
+import { useDispatch } from 'react-redux';
 import { Avatar, Button, Paper, Grid, Typography, Container } from '@material-ui/core';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
@@ -12,6 +14,9 @@ const Auth = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [isSignUp, setIsSignUp] = useState(false);
 
+    const dispatch = useDispatch();
+    const history = useHistory();
+
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
     const handleSubmit = () => {
 
@@ -23,10 +28,21 @@ const Auth = () => {
         setIsSignUp((prevIsSignUp) => !prevIsSignUp);
         handleShowPassword(false);
     }
-    const googleSuccess = (res) => {
-        console.log(res);
+    const googleSuccess = async (res) => {
+        const result = res?.profileObj;
+        // ?. is a chain operator used to avoid getting an error in the event res doesn't exist. so rather than throw an error, it siimply says undefined
+        const token = res?.tokenId;
+
+        try {
+            dispatch({ type: 'AUTH', data: {result, token} });
+
+            history.push('/');
+        } catch (error) {
+            console.log(error);
+        }
     }
-    const googleFailure = () => {
+    const googleFailure = (error) => {
+        console.log(error);
         console.log("Google Login was unsuccessful. Try again later.");
     }
 
@@ -49,8 +65,11 @@ const Auth = () => {
                         <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? "text" : "password"} handleShowPassword={handleShowPassword} />
                         {isSignUp && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange} type="password" />}
                     </Grid>
+                      <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
+                          {isSignUp ? 'Sign Up' : 'Sign In'}
+                      </Button>
                       <GoogleLogin
-                        clientId="GOOGLE ID"
+                        clientId="1084876429631-m5ivdaobr3ch1irfpn60kfl4d32t3t7a.apps.googleusercontent.com"
                         render={(renderProps) => (
                             <Button
                               className={classes.googleButton}
@@ -68,9 +87,6 @@ const Auth = () => {
                         onFailure={googleFailure}
                         cookiePolicy="single_host_origin"
                       />
-                      <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
-                          {isSignUp ? 'Sign Up' : 'Sign In'}
-                      </Button>
                       <Grid container justify="flex-end">
                           <Grid item>
                               <Button onClick={switchMode}>
